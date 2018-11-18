@@ -14,9 +14,9 @@ source:
   sha256: 7493389c1fb9ddc4d4261e15bf2d4198603227275688b1d3e3994d47e976a1f9
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,8 +45,7 @@ about:
   license: GPL-3
   summary: An Implementation of Dimensionality Reduction via Regression using Kernel Ridge Regression.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:

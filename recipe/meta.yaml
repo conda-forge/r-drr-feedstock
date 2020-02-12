@@ -1,4 +1,4 @@
-{% set version = '0.0.3' %}
+{% set version = "0.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DRR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DRR/DRR_{{ version }}.tar.gz
-  sha256: 7493389c1fb9ddc4d4261e15bf2d4198603227275688b1d3e3994d47e976a1f9
+  sha256: 93e365a4907e301ae01f7d943e6bdcda71ef23c51a4759ba3c94bcf842d4e0f8
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1002
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

@@ -1,4 +1,4 @@
-{% set version = '0.0.3' %}
+{% set version = '0.0.4' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: DRR_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/DRR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DRR/DRR_{{ version }}.tar.gz
-  sha256: 7493389c1fb9ddc4d4261e15bf2d4198603227275688b1d3e3994d47e976a1f9
+  sha256: 93e365a4907e301ae01f7d943e6bdcda71ef23c51a4759ba3c94bcf842d4e0f8
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1002
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,14 +44,31 @@ about:
   license: GPL-3
   summary: An Implementation of Dimensionality Reduction via Regression using Kernel Ridge Regression.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - LICENSE
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: DRR
+# Title: Dimensionality Reduction via Regression
+# Version: 0.0.4
+# Authors@R: person("Guido", "Kraemer", email = "gkraemer@bgc-jena.mpg.de", role = c("aut","cre"))
+# Description: An Implementation of Dimensionality Reduction via Regression using Kernel Ridge Regression.
+# License: GPL-3 | file LICENSE
+# URL: https://github.com/gdkrmr/DRR
+# BugReports: https://github.com/gdkrmr/DRR/issues
+# Imports: stats, methods
+# Suggests: knitr, rmarkdown
+# VignetteBuilder: knitr
+# LazyData: true
+# Depends: kernlab, CVST, Matrix
+# RoxygenNote: 7.0.2
+# NeedsCompilation: no
+# Packaged: 2020-02-12 12:31:48 UTC; gkraemer
+# Author: Guido Kraemer [aut, cre]
+# Maintainer: Guido Kraemer <gkraemer@bgc-jena.mpg.de>
+# Repository: CRAN
+# Date/Publication: 2020-02-12 13:10:06 UTC

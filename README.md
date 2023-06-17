@@ -1,11 +1,11 @@
-About r-drr
-===========
+About r-drr-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-drr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/gdkrmr/DRR
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-drr-feedstock/blob/main/LICENSE.txt)
 
 Summary: An Implementation of Dimensionality Reduction via Regression using Kernel Ridge Regression.
 

@@ -1,4 +1,4 @@
-{% set version = '0.0.4' %}
+{% set version = "0.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DRR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DRR/DRR_{{ version }}.tar.gz
-  sha256: 93e365a4907e301ae01f7d943e6bdcda71ef23c51a4759ba3c94bcf842d4e0f8
+  sha256: f4427980dbf7c3ed12c51b166a0fe1feab9f930e2de47bb003ae005958317f96
 
 build:
-  number: 5
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
